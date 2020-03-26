@@ -6,7 +6,7 @@
 #include <vector>
 #include <cassert>
 
-std::int64_t ans = LLONG_MAX; // int64_t тк ответ может переполнить int32_t
+std::int64_t ans = 1e11; // int64_t тк ответ может переполнить int32_t, 1e11 точно больше ответа
 
 struct Point final {
     std::int32_t x;
