@@ -90,7 +90,7 @@ void countMinDist(std::vector<Point> points_by_x, std::vector<Point> points_by_y
     /*
      * Нахождение 'центральных точек'
      */
-    int middle = points_by_x[len / 2 - 1].x;
+    std::int32_t middle = points_by_x[len / 2 - 1].x;
     std::vector<Point> middle_points;
     for (std::size_t i = 0; i < len; ++i) {
         if ((points_by_y[i].x - middle) * (points_by_y[i].x - middle) <= ans) {
@@ -120,7 +120,7 @@ int main() {
     }
     sort(begin(points_by_x), end(points_by_x), compareByX);
     sort(begin(points_by_y), end(points_by_y), compareByY);
-    for (int i = 0; i < n - 1; ++i) {
+    for (std::size_t i = 0; i < n - 1; ++i) {
         if (points_by_x[i] == points_by_x[i + 1]) {
             std::cout << 0;
             return 0;
